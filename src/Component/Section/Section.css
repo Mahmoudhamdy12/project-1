@@ -1,0 +1,39 @@
+@media only screen and (max-width: 991px) {
+    main img {
+        display: none;
+    }
+}
+main {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+main .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .container .text {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+.text h1 {
+    font-family: cursive;
+    font-weight: normal;
+}
+.btn-shop {
+    background: var(--clr-primary-5);
+    border: navajowhite;
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+.btn-shop:hover {
+    background: var(--clr-primary-3);
+}
+main img {
+    width: 500px;
+}

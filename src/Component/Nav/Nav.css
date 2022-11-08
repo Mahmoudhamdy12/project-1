@@ -1,0 +1,168 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .header .container {
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .container {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .header .container{
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+    }
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .container {
+        margin-left: 70px;
+        margin-right: 70px;
+        }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .container {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .header .container {
+        grid-template-columns: auto 1fr;
+    }
+    .menu {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .options {
+        display: none;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 991px) {
+    .menu {
+        z-index: 100;
+        left: 0px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        background-color: white;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 88px);
+        bottom: 0;
+        left: -100%;
+        transition: var(--transition);
+        -webkit-transition: var(--transition);
+        -moz-transition: var(--transition);
+        -ms-transition: var(--transition);
+        -o-transition: var(--transition);
+    }
+     .links {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        gap: 25px;
+        justify-content: center;
+        align-items: flex-start;
+        font-size: 15px;
+        padding-left: 50px;
+    }
+}
+
+
+.header {
+    padding: 25px 0;
+}
+.header .container {
+    display: grid;
+    align-items: center;
+    gap: 20px;
+}
+.container .logo {
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-family: cursive;
+    color: var(--clr-primary-5);
+}
+.options {
+    font-size: 30px;
+    color: var(--clr-primary-5);
+}
+.options svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo:hover {
+    color: var(--clr-primary-3);
+}
+ul {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+li a {
+    color: var(--clr-black);
+}
+li a:hover {
+    color: var(--clr-primary-5);
+    border-bottom: 1px solid var(--clr-primary-5);
+}
+.cart {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+.cart .btn-cart a ,.cart .btn-login {
+    color: var(--clr-black);
+    position: relative;
+    font-size: 22px;
+}
+.cart-icon {
+    position: relative;
+}
+.cart-icon svg {
+    font-size: 22px;
+    padding-right: 3px;
+}
+.cart-value {
+    position: absolute;
+    top: -8px;
+    left: 15px;
+    z-index: 10;
+    background-color: var(--clr-primary-5);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    align-items: center;
+    color: white;
+}
+.btn-login {
+    border: none;
+    background-color: inherit;
+}
+.btn-login:hover,.logo:hover,.options:hover {
+    cursor: pointer;
+}
+/* ::marker() */

@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from './Component/Footer/Footer';
+import Loading from './Component/Loading';
+import Nav from './Component/Nav/Nav';
+import Home from './Home/Home';
+import About from './Component/About/About';
+import Products from './Component/Products/Products';
+
+import Product from './Component/Products/Product/Product';
+import { Routes, Route } from "react-router-dom";
+import { useGlobalContext } from './Context';
+import Cart from './Component/Cart/Cart';
+import Login from './Component/Products/Login/Login';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const {loading} = useGlobalContext();
+
+// console.log(fetchProduct);
+if(loading){
+  return <Loading/>
 }
 
-export default App;
+    return (
+        <div className='app'>
+          <div>
+            <Nav/>
+            <Login/>
+            <Routes>
+            <Route path="/"  element={<Home/>} />              
+            <Route path="/about"  element={<About/>} />              
+            <Route path="/products"  element={<Products />} />              
+            <Route path="/products/product"  element={<Product/>} />              
+            <Route path="/cart"  element={<Cart/>} />              
+            </Routes>
+          <Footer/>
+          </div>
+        </div>
+    )
+}
+
+export default App

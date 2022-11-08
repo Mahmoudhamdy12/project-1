@@ -1,0 +1,13 @@
+.footer {
+    background-color: var(--clr-black);
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 0px;
+    letter-spacing: 2px;
+}
+.footer .span {
+    font-family: cursive;
+    color: var(--clr-primary-5);
+    font-size: 20px;
+}
